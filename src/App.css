@@ -1,0 +1,14 @@
+/* .indie-flower-regular {
+} */
+
+
+#root {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  cursor: none;
+  font-style: normal;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
