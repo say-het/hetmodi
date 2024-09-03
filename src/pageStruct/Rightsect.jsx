@@ -101,7 +101,7 @@ const Rightsect = ({ setIndex, currentIndex }) => {
               />
             </svg>
           </span>
-          <span>Education</span>
+          <span>Connect</span>
         </li>
       </ul>
     </div>

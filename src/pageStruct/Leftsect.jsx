@@ -3,17 +3,32 @@ import Experience from '../pages/experience';
 import Projects from '../pages/projects';
 import Aboutme from '../pages/aboutme';
 import Education from '../pages/education';
+// import '../App.css'
+import './Left.css'
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 
 const Leftsect = ({ index }) => {
+    const components = [
+        <Aboutme key="aboutme" />,
+        <Experience key="experience" />,
+        <Projects key="projects" />,
+        <Education key="education" />
+      ];
+    
   return (
     <>
-      {index === 0 && <Aboutme />}
-      {index === 1 && <Experience />}
-      {index === 2 && <Projects />}
-      {index === 3 && <Education />}
+    <TransitionGroup>
+      <CSSTransition
+        key={index}  
+        timeout={800}  
+        classNames="fade" 
+      >
+        {components[index]}
+      </CSSTransition>
+    </TransitionGroup>
     </>
   );
 };
 
 export default Leftsect;
-    

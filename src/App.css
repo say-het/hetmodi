@@ -12,3 +12,24 @@
   padding: 2rem;
   text-align: center;
 }
+.fade-enter {
+  opacity: 0;
+  transform: scale(0.95); /* Slightly reduce the scale for a subtle zoom-in effect */
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: scale(1); /* Reset scale back to normal */
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: scale(0.95); /* Reduce the scale slightly for a zoom-out effect */
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
